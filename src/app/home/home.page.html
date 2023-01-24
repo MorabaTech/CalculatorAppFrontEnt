@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <form  (ngSubmit)="calculate()">
+    <ion-item lines="full">
+      <ion-label position="floating">NUmber One</ion-label>
+      <ion-input  [(ngModel)]="calculatorObj.firstNumber" name="calculatorObj.numberOne" type="number" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Operator</ion-label>
+      <ion-input   [(ngModel)]="calculatorObj.operator" name="calculatorObj.operator" type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">NUmber two</ion-label>
+      <ion-input   [(ngModel)]="calculatorObj.secondNumber" name="calculatorObj.numberTwo" type="number" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <h3>{{result?.result}}</h3>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block">Calculator</ion-button>
+      </ion-col>
+    </ion-row>
+      <br>
+    <ion-row>
+      <ion-col>
+        <a type="button" [routerLink]="['/list-of-calculations']" color="success" expand="block">List of Calculations</a>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

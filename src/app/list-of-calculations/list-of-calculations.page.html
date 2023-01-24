@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>ListOfCalculations</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let res of results">
+    <p>{{res.firstNumber}}</p><br>
+    <p>{{res.secondNumber}}</p><br>
+    <p>{{res.operator}}</p><br>
+    <p>{{res.result}}</p>
+  </ion-item>
+</ion-content>
